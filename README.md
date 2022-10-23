@@ -5,7 +5,7 @@
 cmake .
 make && make install
 cd wrapper
-python3 setup.py install
+python3 wrapper/setup.py install
 ```
 
 ### Thanks | 鸣谢
