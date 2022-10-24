@@ -7,6 +7,6 @@ file(GLOB SOURCE "src/*.c" "src/rules/*.c")
 add_library(judger SHARED ${SOURCE})
 target_link_libraries(judger pthread seccomp)
 
-install(FILES libjudger.so
+install(FILES build/libjudger.so
     PERMISSIONS OWNER_READ
     DESTINATION /usr/lib/judger)

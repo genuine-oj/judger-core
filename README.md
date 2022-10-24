@@ -2,10 +2,9 @@
 
 ### Install | 安装
 ```bash
-cmake .
-make && make install
-cd wrapper
-python3 wrapper/setup.py install
+sudo apt-get install libseccomp-dev
+mkdir build && cd build && cmake .. && make
+sudo make install
 ```
 
 ### Thanks | 鸣谢
