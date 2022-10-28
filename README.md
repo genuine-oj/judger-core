@@ -7,7 +7,7 @@ mkdir build && cd build && cmake .. && make
 sudo make install
 cd ..  # 回到项目根目录
 cd wrapper
-python3 setup.py install
+sudo python3 setup.py install
 ```
 
 ### Thanks | 鸣谢
