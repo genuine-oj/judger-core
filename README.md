@@ -2,7 +2,7 @@
 
 ### Install | 安装
 ```bash
-sudo apt-get install libseccomp-dev
+sudo apt-get install libseccomp-dev python3-dev
 mkdir build && cd build && cmake .. && make
 sudo make install
 cd ..  # 回到项目根目录
