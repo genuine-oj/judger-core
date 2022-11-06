@@ -133,7 +133,7 @@ static PyObject* moduleinit(void) {
 #if PY_MAJOR_VERSION >= 3
     static struct PyModuleDef judger_def = {
         PyModuleDef_HEAD_INIT,
-        "_judger",                       /* m_name */
+        "judgercore",                       /* m_name */
         NULL,                            /* m_doc */
         -1,                              /* m_size */
         judger_methods,                  /* m_methods */
@@ -147,7 +147,7 @@ static PyObject* moduleinit(void) {
 #if PY_MAJOR_VERSION >= 3
     PyObject *module = PyModule_Create(&judger_def);
 #else
-    PyObject *module = Py_InitModule3("_judger", judger_methods, NULL);
+    PyObject *module = Py_InitModule3("judgercore", judger_methods, NULL);
 #endif
 
     PyModule_AddIntConstant(module, "VERSION", VERSION);
@@ -176,12 +176,12 @@ static PyObject* moduleinit(void) {
 }
 
 #if PY_MAJOR_VERSION >= 3
-    PyMODINIT_FUNC PyInit__judger(void)
+    PyMODINIT_FUNC PyInit_judgercore(void)
     {
         return moduleinit();
     }
 #else
-    PyMODINIT_FUNC init_judger(void)
+    PyMODINIT_FUNC initjudgercore(void)
     {
         moduleinit();
     }

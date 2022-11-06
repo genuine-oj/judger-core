@@ -1,17 +1,17 @@
-import _judger
+import judgercore
 import os
 
 if os.system("gcc main.c -o main"):
     print("compile error")
     exit(1)
 
-ret = _judger.run(max_cpu_time=1000,
+ret = judgercore.run(max_cpu_time=1000,
                   max_real_time=2000,
                   max_memory=128 * 1024 * 1024,
                   max_process_number=200,
                   max_output_size=10000,
                   max_stack=32 * 1024 * 1024,
-                  # five args above can be _judger.UNLIMITED
+                  # five args above can be judgercore.UNLIMITED
                   exe_path="main",
                   input_path="1.in",
                   output_path="1.out",
